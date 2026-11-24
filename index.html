@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shreeya Pandey, Software Engineer</title>
+  <meta name="description" content="Shreeya Pandey, full-stack software engineer in Boston: Java, TypeScript, React, Node.js, Python, and AI.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <a class="mark" href="#top" aria-label="Shreeya Pandey, home">SP</a>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>Shreeya Pandey</h1>
+        <p class="lede">I build reliable software end to end: the services and APIs, the screens people use, and the data and AI work behind them.</p>
+        <p class="sub">Full-stack engineer with 5+ years in Java, TypeScript, Node.js, React, and Python. M.S. in Computer Science, first-author publication in medical imaging. Based in Boston.</p>
+        <div class="actions">
+          <a class="btn primary" href="mailto:shreeya227@gmail.com">Email me</a>
+          <a class="btn" href="https://github.com/shreeya227">GitHub</a>
+          <a class="btn" href="https://linkedin.com/in/shreeya-pandey-881496124/">LinkedIn</a>
+        </div>
+      </div>
+
+      <figure class="chart-panel" aria-labelledby="chart-title">
+        <div class="chart-head">
+          <h2 id="chart-title">Before and after, from my work</h2>
+          <div class="toggle" role="group" aria-label="Choose a result">
+            <button type="button" data-metric="0" aria-pressed="true">Latency</button>
+            <button type="button" data-metric="1" aria-pressed="false">Pipeline</button>
+            <button type="button" data-metric="2" aria-pressed="false">Deploys</button>
+          </div>
+        </div>
+        <div class="chart-box"><canvas id="results" role="img" aria-label="Bar chart comparing a measurement before and after my change"></canvas></div>
+        <figcaption>
+          <span id="chart-summary"></span>
+          <span id="chart-how"></span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section id="work" class="block">
+      <h2>Work</h2>
+      <ol class="timeline">
+        <li>
+          <div class="when">Feb 2026 to now</div>
+          <div class="what">
+            <h3>Software Engineer, Enfinitty</h3>
+            <p>Took an education platform from design to launch in three months as one of two engineers. Built 8 React and TypeScript screens for enrollment and payments, Node.js and Spring Boot APIs, and provider integrations with zero failed data exchanges.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Aug 2024 to Dec 2025</div>
+          <div class="what">
+            <h3>Graduate Research Software Engineer, University of Louisiana at Lafayette</h3>
+            <p>Redesigned a distributed AWS data pipeline, cutting failures from 30% to under 5% and runtime from 3 hours to 30 minutes. Ran an LLM pipeline serving 1,000+ model calls a day, and built a FastAPI service so researchers could run it themselves.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">Aug 2020 to Dec 2023</div>
+          <div class="what">
+            <h3>Software Engineer, Deerhold</h3>
+            <p>Worked on a healthcare platform with 10,000+ users. Built patient progress graphs with Chart.js and Plotly, a Socket.IO service that cut live-update delays from 45 seconds to near real time, and frontend work that made pages load about 30% faster. Cut API latency 35% and halved recurring production incidents.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="projects" class="block">
+      <h2>Projects</h2>
+      <p class="intro">Things I built on my own, with the code public on GitHub.</p>
+
+      <h3 class="group">Software</h3>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>Vehicle Title Transaction API</h4>
+          <p>A Java 21 service for vehicle title transactions with state title registries, offered over both REST and contract-first SOAP. Idempotency keys, a transactional outbox, and a circuit breaker keep records correct through retries, duplicate callbacks, and downstream failures. Traced end to end with OpenTelemetry.</p>
+          <p class="stack">Java 21, Spring Boot 3, PostgreSQL, Spring Cloud Gateway, Resilience4j, OpenTelemetry, Kubernetes</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/vehicle-api">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>House Tasks</h4>
+          <p>A chore rotation app for my seven-person house. Everyone gets a weekly task and a push notification on Monday. The "exactly once" message is guaranteed by a Postgres constraint and tested against a real database, including three overlapping runs.</p>
+          <p class="stack">TypeScript, Next.js, PostgreSQL, Web Push, Vitest, GitHub Actions</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/house-tasks">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>HouseMate Agent</h4>
+          <p>An AI assistant that answers questions about a group chat with citations to the exact messages. A grounding check flags any citation it never retrieved. Evaluations caught a silent cutoff that had one feature scoring 0%, now 100%.</p>
+          <p class="stack">Python, Claude API tool use, BM25 retrieval, pytest</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/housemate-agent">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>Recast</h4>
+          <p>An AI resume tailoring tool. A Chrome extension pulls the job description from a listing page, a Spring Boot backend uses the Gemini API to extract skills and rewrite resume content, and the result is compiled from LaTeX into a PDF in one click.</p>
+          <p class="stack">Java, Spring Boot, Gemini API, LaTeX, JavaScript (Chrome extension)</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/AIResumeTailor">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>InspectionTrack</h4>
+          <p>Tracks loss-prevention recommendations from a site inspection to closure. Due dates follow severity, the workflow is enforced, every status change is audited, and a daily Azure Function flags anything overdue.</p>
+          <p class="stack">C#, ASP.NET Core, Entity Framework Core, Azure SQL, Azure Functions, Azure DevOps</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/inspection-track">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>Heart Model Builder</h4>
+          <p>A 3D Slicer module that turns a segmented structure from a CT scan into a smoothed 3D model, measures it, and exports it for 3D printing. Smoothing cut surface-area error on CT-like data from 8.8% to under 0.5%.</p>
+          <p class="stack">Python, 3D Slicer, VTK, NumPy</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/slicer-heart-model">View code</a>
+      </article>
+
+      <h3 class="group">Machine learning</h3>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>Visual field prediction from OCT</h4>
+          <p>The code behind my published thesis: a fairness-aware 3D ResNet-18 that predicts visual field loss from 3,300 OCT scans and reduced error disparity between patient subgroups by 37%.</p>
+          <p class="stack">Python, PyTorch, NumPy, OpenCV</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/JMI-VF-Prediction">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>Glaucoma progression from retinal maps</h4>
+          <p>An exploratory study of whether one baseline retinal thickness map can predict future glaucoma progression, fine-tuning VGG16 and EfficientNet and comparing performance across demographic subgroups.</p>
+          <p class="stack">Python, PyTorch, transfer learning</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/Medical-AI">View code</a>
+      </article>
+
+      <article class="project">
+        <div class="p-main">
+          <h4>Movie review sentiment</h4>
+          <p>A bidirectional LSTM that classifies 50,000 IMDB reviews as positive or negative, reaching 87.6% accuracy and 0.93 AUC.</p>
+          <p class="stack">Python, PyTorch, NLP</p>
+        </div>
+        <a class="p-link" href="https://github.com/shreeya227/Sentiment-Analysis-IMDB">View code</a>
+      </article>
+    </section>
+
+    <section id="research" class="block">
+      <h2>Research</h2>
+      <blockquote class="paper">
+        <p class="paper-title">Fairness-aware deep learning for predicting visual field loss from optical coherence tomography</p>
+        <p>Pandey, S., Gheisi, L., Huang, Y., Lin, M., Zheng, H., Shi, M. <cite>Journal of Medical Imaging</cite> (SPIE), 13(4), 044502, July 2026. First author.</p>
+      </blockquote>
+    </section>
+
+    <section id="skills" class="block">
+      <h2>Tools I use</h2>
+      <dl class="skills">
+        <div><dt>Frontend</dt><dd>React, TypeScript, Next.js, Vue, Angular, HTML and CSS, Tailwind, Chart.js, Plotly</dd></div>
+        <div><dt>Backend</dt><dd>Java and Spring Boot, Node.js and Express, Python with FastAPI and Django, C# and ASP.NET Core, REST, SOAP, GraphQL, WebSockets, Kafka</dd></div>
+        <div><dt>Data and cloud</dt><dd>PostgreSQL, MySQL, MongoDB, Redis, AWS, Azure, Docker, Kubernetes, Terraform, Linux</dd></div>
+        <div><dt>AI</dt><dd>Claude and Gemini APIs, tool use, retrieval, evaluations, PyTorch. I code daily with Claude Code and review every change it makes.</dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="block contact">
+      <h2>Get in touch</h2>
+      <p>I'm looking for full-stack and backend engineering roles. Based in Boston and open to relocating.</p>
+      <a class="email" href="mailto:shreeya227@gmail.com">shreeya227@gmail.com</a>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>Shreeya Pandey, Boston, MA</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
